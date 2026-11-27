@@ -4,7 +4,7 @@ A static site built with HTML and CSS. Open `index.html` in a browser or serve t
 
 ## Updating the site
 
-Edit the software, research, or about sections in `index.html`. Shared styling lives in `styles.css`. Future demos can live in standalone folders such as `demos/storage-dispatch/`, with each demo loading its own scripts and styles.
+Update Publications, Software, or About in `index.html`. The layout lives in `styles.css`, and the hero illustration is stored in `energy-campus.webp`. Future demos can live in standalone folders such as `demos/storage-dispatch/`, with each demo loading its own scripts and styles.
 
 ## GitHub Pages
 
