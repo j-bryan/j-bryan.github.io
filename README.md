@@ -4,7 +4,9 @@ A static site built with HTML and CSS. Open `index.html` in a browser or serve t
 
 ## Updating the site
 
-Update Publications, Software, or About in `index.html`. The layout lives in `styles.css`, and the hero illustration is stored in `energy-campus.webp`. Future demos can live in standalone folders such as `demos/storage-dispatch/`, with each demo loading its own scripts and styles.
+Update Publications, Software, or About in `index.html`. The layout lives in `styles.css`. Future demos can live in standalone folders such as `demos/storage-dispatch/`, with each demo loading its own scripts and styles.
+
+The campus animation uses SVG overlays in `index.html` and CSS keyframes in `styles.css`. The overlay coordinates match the 1200 × 800 artwork in `energy-campus-base.webp`, where the original blades have been removed. Visitors who prefer reduced motion see the original `energy-campus.webp`.
 
 ## GitHub Pages
 

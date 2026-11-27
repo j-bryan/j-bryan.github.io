@@ -121,24 +121,48 @@ h1 em { font-weight: inherit; color: var(--accent); }
 
 .campus {
   display: grid;
-  grid-template-rows: 1fr auto;
   align-items: center;
   min-width: 0;
   padding: clamp(.7rem, 2vw, 1.25rem);
   border: 1px solid var(--rule);
   background: radial-gradient(ellipse, #dbe8d8, transparent 78%), var(--panel);
 }
-.campus img {
+.campus-art {
+  position: relative;
+  width: min(100%, 51rem);
+  margin-inline: auto;
+}
+.campus-art img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 34rem;
-  object-fit: contain;
 }
-.campus figcaption {
-  color: var(--muted);
-  font: .75rem/1.4 var(--mono);
-  text-align: right;
+.campus-motion { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .campus-motion {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .campus-rotor { animation: campus-spin 6s linear var(--phase, 0s) infinite; }
+  .campus-plume { animation: campus-rise 8s linear var(--phase, 0s) infinite; }
+}
+
+/* One revolution every six seconds is 10 RPM. */
+@keyframes campus-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes campus-rise {
+  0% { opacity: 0; transform: translate(0, 0) scale(.44); }
+  22% { opacity: .95; }
+  53% { opacity: .86; transform: translate(12px, -49px) scale(.96); }
+  80% { opacity: .36; }
+  100% { opacity: 0; transform: translate(37px, -108px) scale(1.46); }
 }
 
 .topics {
